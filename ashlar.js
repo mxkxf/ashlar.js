@@ -7,7 +7,7 @@
     var settings = $.extend({
       baseline: 21,
       baselineColour: '#ddd',
-      cols: 10,
+      cols: 12,
       colColour: '#eee',
       gutter: 20
     }, options);
