@@ -4,7 +4,9 @@
 
     var settings = $.extend({
       baseline: 21,
+      baselineColour: '#ddd',
       cols: 10,
+      colColour: '#eee',
       gutter: 20
     }, options);
 
@@ -31,7 +33,7 @@
 
       for (i = 0; i < settings.cols; i += 1) {
         $col = $('<div></div>').css({
-          backgroundColor: '#eee',
+          backgroundColor: settings.colColour,
           float: 'left',
           height: 'inherit',
           width: colWidth + '%'
@@ -44,7 +46,7 @@
 
       for (i = 0; i < baselines; i += 1) {
         $row = $('<div></div>').css({
-          borderBottom: 'solid 1px #ddd',
+          borderBottom: 'solid 1px ' + settings.baselineColour,
           position: 'absolute',
           height: baselineSansBorder + 'px',
           top: (i * settings.baseline) + 'px',
@@ -58,7 +60,5 @@
     });
 
   };
-
-  $('#wrapper').ashlar({cols: 12});
 
 }(jQuery));
