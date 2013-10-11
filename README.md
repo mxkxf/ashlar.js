@@ -1,6 +1,6 @@
 # ashlar.js
 
-A jQuery plugin for generating horizontal and vertical baseline grids.
+A flexible jQuery plugin for generating horizontal and vertical baseline grids. Super-duper lightweight at 0.7kb. 
 
 ## Usage
 

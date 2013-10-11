@@ -2,6 +2,8 @@
 
   $.fn.ashlar = function (options) {
 
+    // Should probably refactor naming structure, seems messy
+
     var settings = $.extend({
       baseline: 21,
       baselineColour: '#ddd',
@@ -24,12 +26,16 @@
         $row,
         i;
 
+      // Create grid element to wrap horizontal/vertical lines
+
       $grid = $('<div></div>').css({
         position: 'absolute',
         height: containerHeight,
         width: containerWidth,
         zIndex: -1
       });
+
+      // Horizontal lines
 
       for (i = 0; i < settings.cols; i += 1) {
         $col = $('<div></div>').css({
@@ -38,11 +44,14 @@
           height: 'inherit',
           width: colWidth + '%'
         });
+        // Only add margin-left to 2n elements
         if (i > 0) {
           $col.css({ marginLeft: gutterWidth + '%' });
         }
         $grid.append($col);
       }
+
+      // Vertical lines
 
       for (i = 0; i < baselines; i += 1) {
         $row = $('<div></div>').css({
