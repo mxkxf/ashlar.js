@@ -5,8 +5,7 @@
     var settings = $.extend({
       baseline: 21,
       cols: 10,
-      gutter: 20,
-      maxWidth: 960
+      gutter: 20
     }, options);
 
     return this.each(function () {
@@ -14,7 +13,7 @@
       var $container       = $(this),
         containerWidth     = $container.width(),
         containerHeight    = $container.height(),
-        gutterWidth        = ((20 / settings.maxWidth) * 100),
+        gutterWidth        = ((20 / (containerWidth + settings.gutter)) * 100),
         colWidth           = (100 / settings.cols) - gutterWidth + (gutterWidth / settings.cols),
         baselineSansBorder = (settings.baseline - 1),
         baselines          = Math.floor(containerHeight / settings.baseline),
