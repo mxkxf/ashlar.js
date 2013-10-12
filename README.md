@@ -4,9 +4,16 @@ A flexible jQuery plugin for generating horizontal and vertical baseline grids. 
 
 ## Usage
 
-At it's simplest ashlar.js can be used on any selector which you want to add horizontal or vertical guides to.
+At it's simplest ashlar.js can be used on any selector which you want to add horizontal or vertical guides to:
 
-    $('#wrapper').ashlar();
+    jQuery('#wrapper').ashlar();
+
+Though you'll probably want to change the dimensions to fit with your own design. All the options are passed in the standard way:
+
+    jQuery('#wrapper').ashlar({
+    	baseline: 21,
+      cols: 16
+    })
     
 ## Options
 
