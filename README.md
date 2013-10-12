@@ -11,8 +11,8 @@ At it's simplest ashlar.js can be used on any selector which you want to add hor
 Though you'll probably want to change the dimensions to fit with your own design. All the options are passed in the standard way:
 
     jQuery('#wrapper').ashlar({
-    	baseline: 21,
-        cols: 16
+      baseline: 21,
+      cols: 16
     })
     
 ## Options
