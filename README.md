@@ -12,7 +12,7 @@ Though you'll probably want to change the dimensions to fit with your own design
 
     jQuery('#wrapper').ashlar({
     	baseline: 21,
-      cols: 16
+        cols: 16
     })
     
 ## Options
