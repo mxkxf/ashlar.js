@@ -4,6 +4,8 @@ A flexible jQuery plugin for generating horizontal and vertical baseline grids. 
 
 ## Usage
 
+Quick example throw up here (http://mikefrancis.me/ashlar.js/)
+
 At it's simplest ashlar.js can be used on any selector which you want to add horizontal or vertical guides to:
 
     jQuery('#wrapper').ashlar();
