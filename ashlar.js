@@ -5,7 +5,7 @@
     // Should probably refactor naming structure, seems messy
 
     var settings = $.extend({
-      baseline: 21,
+      baseline: 24,
       baselineColour: '#ddd',
       cols: 12,
       colColour: '#eee',
