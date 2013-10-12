@@ -9,7 +9,9 @@
       baselineColour: '#ddd',
       cols: 12,
       colColour: '#eee',
-      gutter: 20
+      gutter: 20, 
+      horizontal: true,
+      vertical: true
     }, options);
 
     return this.each(function () {
@@ -37,31 +39,34 @@
 
       // Horizontal lines
 
-      for (i = 0; i < settings.cols; i += 1) {
-        $col = $('<div></div>').css({
-          backgroundColor: settings.colColour,
-          float: 'left',
-          height: 'inherit',
-          width: colWidth + '%'
-        });
-        // Only add margin-left to 2n elements
-        if (i > 0) {
-          $col.css({ marginLeft: gutterWidth + '%' });
+      if (settings.horizontal === true) {
+        for (i = 0; i < settings.cols; i += 1) {
+          $col = $('<div></div>').css({
+            backgroundColor: settings.colColour,
+            float: 'left',
+            height: 'inherit',
+            width: colWidth + '%'
+          });
+          // Only add margin-left to 2n elements
+          if (i > 0) {
+            $col.css({ marginLeft: gutterWidth + '%' });
+          }
+          $grid.append($col);
         }
-        $grid.append($col);
       }
 
       // Vertical lines
-
-      for (i = 0; i < baselines; i += 1) {
-        $row = $('<div></div>').css({
-          borderBottom: 'solid 1px ' + settings.baselineColour,
-          position: 'absolute',
-          height: baselineSansBorder + 'px',
-          top: (i * settings.baseline) + 'px',
-          width: '100%'
-        });
-        $grid.append($row);
+      if (settings.vertical === true) {
+        for (i = 0; i < baselines; i += 1) {
+          $row = $('<div></div>').css({
+            borderBottom: 'solid 1px ' + settings.baselineColour,
+            position: 'absolute',
+            height: baselineSansBorder + 'px',
+            top: (i * settings.baseline) + 'px',
+            width: '100%'
+          });
+          $grid.append($row);
+        }
       }
 
       $(this).prepend($grid);

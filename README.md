@@ -4,39 +4,53 @@ A flexible jQuery plugin for generating horizontal and vertical baseline grids. 
 
 ## Usage
 
+At it's simplest ashlar.js can be used on any selector which you want to add horizontal or vertical guides to.
+
     $('#wrapper').ashlar();
     
 ## Options
 
 ### baseline
 
-Type: `int` Default: `24`
+Type: `Integer` Default: `24`
 
 Space between vertical lines, typically the base font size multiplied by the line height e.g. 16 * 1.5 = 24
 
 ### baselineColour
 
-Type: `string` Default: `#ddd`
+Type: `String` Default: `#ddd`
 
-Colour of the vertical grid
+Colour of the vertical grid; can be provided as a hex, color, rgb or rgba value
 
 ### cols
 
-Type: `int` Default: `12`
+Type: `Integer` Default: `12`
 
 Number of horizontal columns
 
 ### colColour
 
-Type: `string` Default: `#eee`
+Type: `String` Default: `#eee`
 
-Colour of the horizontal grid
+Colour of the horizontal grid; can be provided as a hex, color, rgb or rgba value
 
 ### gutter
 
-Type: `int` Default: `20`
+Type: `Integer` Default: `20`
 
 Space between columns in pixels
+
+### horizontal
+
+Type: `Boolean` Default: `true`
+
+Show the horizontal grid
+
+### vertical
+
+Type: `Boolean` Default: `true`
+
+Show the vertical grid
 
 ## Browser Support
 
