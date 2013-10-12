@@ -1,10 +1,13 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    jshint: {
+      all: ['Gruntfile.js', 'ashlar.js']
+    },
     uglify: {
       my_target: {
         files: {
-          'ashlar.min.js': ['ashlar.js']
+          'ashlar.min.js': 'ashlar.js'
         }
       }
     }
@@ -12,6 +15,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib');
 
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['jshint', 'uglify']);
 
 };
