@@ -17,7 +17,7 @@
       var $container       = $(this),
         containerWidth     = $container.width(),
         containerHeight    = $container.height(),
-        gutterWidth        = ((20 / (containerWidth + settings.gutter)) * 100),
+        gutterWidth        = ((settings.gutter / (containerWidth + settings.gutter)) * 100),
         colWidth           = (100 / settings.cols) - gutterWidth + (gutterWidth / settings.cols),
         baselineSansBorder = (settings.baseline - 1),
         baselines          = Math.floor(containerHeight / settings.baseline),
