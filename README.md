@@ -21,7 +21,7 @@ Though you'll probably want to change the dimensions to fit with your own design
 
 ### baseline
 
-Type: `Integer` Default: `24`
+Type: `Float` Default: `24`
 
 Space between vertical lines, typically the base font size multiplied by the line height e.g. 16 * 1.5 = 24
 

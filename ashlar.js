@@ -23,6 +23,7 @@
         colWidth           = (100 / settings.cols) - gutterWidth + (gutterWidth / settings.cols),
         baselineSansBorder = (settings.baseline - 1),
         baselines          = Math.floor(containerHeight / settings.baseline),
+        baseline           = Math.floor(settings.baseline),
         $grid,
         $col,
         $row,
@@ -56,13 +57,14 @@
       }
 
       // Vertical lines
+
       if (settings.vertical === true) {
-        for (i = 0; i < baselines; i += 1) {
+        for (i = 1; i < baselines; i += 1) {
           $row = $('<div></div>').css({
-            borderBottom: 'solid 1px ' + settings.baselineColour,
+            backgroundColor: settings.baselineColour,
             position: 'absolute',
-            height: baselineSansBorder + 'px',
-            top: (i * settings.baseline) + 'px',
+            height: '1px',
+            top: (i * baseline) + 'px',
             width: '100%'
           });
           $grid.append($row);
