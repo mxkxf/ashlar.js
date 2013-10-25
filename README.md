@@ -68,7 +68,3 @@ Show the vertical grid
 * Safari 4.0+
 * Chrome 14.0+
 * Opera 10.0+
-
-## Credits
-
-Based on FlexBones by [roikles](http://github.com/roikles)
